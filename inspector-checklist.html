@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inspector Business Protection Checklist</title>
+<style>
+:root{--ink:#14263a;--paper:#fbfaf7;--line:#c9cfd6;--flag:#b3261e;--ok:#1f6b45;--accent:#1d4f7a}
+*{box-sizing:border-box}
+body{margin:0;background:#e9ecef;color:var(--ink);font:18px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:640px;margin:0 auto;background:var(--paper);padding:28px 20px 40px;min-height:100vh}
+h1{font:700 30px/1.15 Georgia,serif;margin:0 0 8px}
+.sub{margin:0 0 24px;color:#40505f}
+h2{font:700 21px Georgia,serif;margin:30px 0 4px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+.q{padding:14px 0;border-bottom:1px solid var(--line)}
+.q p{margin:0 0 8px}
+.yn{display:flex;gap:10px}
+.yn label{flex:1;text-align:center;border:2px solid var(--line);border-radius:8px;padding:10px 0;cursor:pointer;font-weight:600;background:#fff}
+.yn input{position:absolute;opacity:0}
+.yn label:has(input:checked){background:var(--accent);border-color:var(--accent);color:#fff}
+.yn label:has(input:focus-visible){outline:3px solid #f2a900;outline-offset:2px}
+.amt{display:flex;align-items:center;gap:8px}
+.amt input{font:inherit;width:100%;max-width:200px;padding:9px;border:2px solid var(--line);border-radius:8px}
+#score{position:sticky;bottom:0;margin:28px -20px 0;padding:14px 20px;background:var(--ink);color:#fff;font-weight:600}
+#result{margin:24px 0 0;padding:18px;border:2px solid var(--ink);border-radius:8px;background:#fff;display:none}
+#result.show{display:block}
+#result strong{font-size:20px}
+.contact{margin-top:28px;font-size:17px;border-top:2px solid var(--ink);padding-top:16px}
+.contact a{color:var(--accent);font-weight:700}
+small{display:block;margin-top:18px;color:#5b6773;font-size:14px;line-height:1.4}
+</style>
+</head>
+<body>
+<main>
+<h1>Inspector Business Protection Checklist</h1>
+<p class="sub">Five minutes. Answer honestly. Nothing is saved or sent anywhere.</p>
+
+<h2>1. Income gap</h2>
+<div class="q"><p>Could you cover your bills for 90 days if you couldn’t work?</p><div class="yn"><label><input type="radio" name="q1" value="y">Yes</label><label><input type="radio" name="q1" value="n">No</label></div></div>
+<div class="q"><p>Do you have disability coverage?</p><div class="yn"><label><input type="radio" name="q2" value="y">Yes</label><label><input type="radio" name="q2" value="n">No</label></div></div>
+<div class="q"><p>Does your family know what you earn and owe?</p><div class="yn"><label><input type="radio" name="q3" value="y">Yes</label><label><input type="radio" name="q3" value="n">No</label></div></div>
+
+<h2>2. Keeping the business running</h2>
+<div class="q"><p>Could another inspector finish your scheduled jobs?</p><div class="yn"><label><input type="radio" name="q4" value="y">Yes</label><label><input type="radio" name="q4" value="n">No</label></div></div>
+<div class="q"><p>Are your client list, report templates, and software logins written down where your spouse or partner can find them?</p><div class="yn"><label><input type="radio" name="q5" value="y">Yes</label><label><input type="radio" name="q5" value="n">No</label></div></div>
+<div class="q"><p>Do you know what happens to your E&amp;O insurance if you stop working?</p><div class="yn"><label><input type="radio" name="q6" value="y">Yes</label><label><input type="radio" name="q6" value="n">No</label></div></div>
+
+<h2>3. Equipment and debts</h2>
+<div class="q"><p>Would business loans, leases, or credit cards stay with you, not your family, if you passed away?</p><div class="yn"><label><input type="radio" name="q7" value="y">Yes</label><label><input type="radio" name="q7" value="n">No</label></div></div>
+<div class="q"><p>Total owed on loans, leases, and cards (optional):</p><div class="amt">$<input type="text" inputmode="numeric" aria-label="Total owed"></div></div>
+
+<h2>4. Retirement</h2>
+<div class="q"><p>Do you save something every month outside of Social Security?</p><div class="yn"><label><input type="radio" name="q8" value="y">Yes</label><label><input type="radio" name="q8" value="n">No</label></div></div>
+<div class="q"><p>Do you have a 401(k), SEP-IRA, or similar plan?</p><div class="yn"><label><input type="radio" name="q9" value="y">Yes</label><label><input type="radio" name="q9" value="n">No</label></div></div>
+
+<h2>5. Life insurance</h2>
+<div class="q"><p>Do you have life insurance today?</p><div class="yn"><label><input type="radio" name="q10" value="y">Yes</label><label><input type="radio" name="q10" value="n">No</label></div></div>
+<div class="q"><p>Is it enough to cover your debts plus a few years of income?</p><div class="yn"><label><input type="radio" name="q11" value="y">Yes</label><label><input type="radio" name="q11" value="n">No</label></div></div>
+<div class="q"><p>Have you reviewed it in the last two years?</p><div class="yn"><label><input type="radio" name="q12" value="y">Yes</label><label><input type="radio" name="q12" value="n">No</label></div></div>
+
+<div id="score">Gaps found: <span id="count">0</span> of 12 answered: <span id="done">0</span></div>
+
+<div id="result" role="status" aria-live="polite"></div>
+
+<div class="contact">
+<strong>Want to talk it through?</strong><br>
+Ron Launsby, Licensed Life Insurance Agent<br>
+Call or text: <a href="tel:+10000000000">[YOUR PHONE]</a><br>
+Missouri License #[YOUR LICENSE NUMBER]
+</div>
+<small>Educational tool only. Not financial, legal, or tax advice. Life insurance products have fees and limits, and cash value growth is not guaranteed.</small>
+</main>
+<script>
+const r=document.getElementById('result'),c=document.getElementById('count'),d=document.getElementById('done');
+function update(){
+  let gaps=0,done=0;
+  // Q1-Q8 and Q9-Q12: a "No" is a gap for every question
+  for(let i=1;i<=12;i++){
+    const v=document.querySelector('input[name="q'+i+'"]:checked');
+    if(v){done++;if(v.value==='n')gaps++;}
+  }
+  c.textContent=gaps;d.textContent=done;
+  if(done<12){r.className='';return;}
+  r.className='show';
+  r.innerHTML=gaps>=3
+    ?'<strong>'+gaps+' gaps found.</strong><br>That’s worth a 15-minute conversation. Call or text Ron using the number below.'
+    :'<strong>'+gaps+(gaps===1?' gap':' gaps')+' found.</strong><br>You’re in better shape than most independent inspectors. A quick review once a year keeps it that way.';
+}
+document.querySelectorAll('input[type=radio]').forEach(i=>i.addEventListener('change',update));
+</script>
+</body>
+</html>
